@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<AnchorPane fx:id="body2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="963.0" prefWidth="1192.0" style="-fx-background-color: #7679B1;" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <Circle fill="#d1d1d1" layoutX="1085.0" layoutY="89.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
+    <!-- Sidebar Section -->
+    <AnchorPane prefHeight="1006.0" prefWidth="270.0" style="-fx-background-color: #011455;">
+        <stylesheets>
+            <URL value="@style1.css" />
+        </stylesheets>
+        <children>
+            <Button layoutX="9.0" layoutY="36.0" mnemonicParsing="false" onAction="#openHomePage" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #0BF4DC;" text="Home">
+                <styleClass>
+                    <String fx:value="shadow" />
+                    <String fx:value="edge" />
+                </styleClass>
+            </Button>
+            <Button layoutX="9.0" layoutY="109.0" mnemonicParsing="false" onAction="#openStatusPage" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #0BF4DC;" text="Status">
+                <styleClass>
+                    <String fx:value="shadow" />
+                    <String fx:value="rectangle" />
+                </styleClass>
+            </Button>
+            <Button layoutX="9.0" layoutY="182.0" mnemonicParsing="false" onAction="#openPeopleVotePage" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #0BF4DC;" text="People Vote">
+                <styleClass>
+                    <String fx:value="shadow" />
+                    <String fx:value="edge" />
+                </styleClass>
+            </Button>
+            <Button layoutX="9.0" layoutY="255.0" mnemonicParsing="false" onAction="#openCandidatePage" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #0BF4DC;" text="Candidate">
+                <styleClass>
+                    <String fx:value="shadow" />
+                    <String fx:value="edge" />
+                </styleClass>
+            </Button>
+        </children>
+    </AnchorPane>
+    <ImageView fitHeight="70.0" fitWidth="83.0" layoutX="1044.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@admin.png" />
+        </image>
+    </ImageView>
+    <Label layoutX="1017.0" layoutY="145.0" styleClass="title" stylesheets="@style1.css" text="Admin" textFill="WHITE">
+        <font>
+            <Font size="48.0" />
+        </font>
+    </Label>
+    <!-- VBox where candidates will be dynamically added -->
+    <Pane layoutX="387.0" layoutY="214.0" prefHeight="402.0" prefWidth="398.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3;">
+        <children>
+            <VBox fx:id="candidateVBox" alignment="CENTER_LEFT" layoutX="4.0" layoutY="4.0" onMouseClicked="#loadCandidates" prefHeight="390.0" prefWidth="391.0" spacing="10.0" />
+        </children>
+    </Pane>
+</AnchorPane>
+

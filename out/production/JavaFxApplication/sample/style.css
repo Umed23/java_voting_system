@@ -1,0 +1,93 @@
+.rectangle {
+    -fx-arc-width: 250;  /* Rounded corners */
+    -fx-arc-height: 1000;
+    -fx-fill: lightgrey;  /* Fill color (background color for rectangle) */
+    -fx-effect: dropshadow(gaussian, rgba(50, 50, 93, 0.25), 30, 0.25, 0, 12),
+                dropshadow(gaussian, rgba(0, 0, 0, 0.3), 18, 0.3, 0, 18);
+}
+
+.button {
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-border-color: none; /* No border */
+    -fx-padding: 0; /* No padding */
+    -fx-cursor: hand; /* Pointer cursor */
+    -fx-effect: none; /* Disable default focus outline */
+    -fx-transition: filter 250ms;
+    -fx-user-select: none;
+    -fx-touch-action: manipulation;
+    -fx-position: relative; /* Setting position relative */
+}
+
+.shadow {
+    -fx-position: absolute; /* Shadow positioned absolutely */
+    -fx-top: 0;
+    -fx-left: 0;
+    -fx-width: 100%; /* Full width */
+    -fx-height: 100%; /* Full height */
+    -fx-background-radius: 12px; /* Border radius */
+    -fx-background-color: rgba(0, 0, 0, 0.25); /* Shadow color */
+    -fx-translate-y: 2px; /* Positioning the shadow */
+    -fx-transition: translate 600ms cubic-bezier(0.3, 0.7, 0.4, 1); /* Transition effect */
+}
+
+.edge {
+    -fx-position: absolute;
+    -fx-top: 0;
+    -fx-left: 0;
+    -fx-width: 100%;
+    -fx-height: 100%;
+    -fx-background-radius: 12px;
+    -fx-background: linear-gradient(
+        to right,
+        rgb(134, 0, 64) 0%, /* Dark reddish color */
+        rgb(204, 0, 102) 8%, /* Slightly lighter reddish color */
+        rgb(204, 0, 102) 92%, /* Slightly lighter reddish color */
+        rgb(128, 0, 64) 100% /* Dark reddish color */
+    ); /* Gradient effect */
+}
+
+.button:hover {
+    -fx-translate-y: -6px;
+    -fx-background-color: lightgrey; /* Adjusted to a valid color */
+    -fx-transition: translate 250ms ease;
+}
+
+.button:pressed {
+    -fx-translate-y: -2px;
+    -fx-transition: translate 34ms ease;
+}
+
+.shadow:hover {
+    -fx-translate-y: 4px;
+    -fx-transition: translate 250ms ease;
+}
+
+.shadow:pressed {
+    -fx-translate-y: 1px;
+    -fx-transition: translate 34ms ease;
+}
+
+.button:focused {
+    -fx-effect: none; /* Removing outline when focused */
+}
+
+#body1 {
+      -fx-background-image: url("./body.png");/* Adjust the path to your image */
+    -fx-background-size: contain; /* Ensure the background image covers the area */
+}
+
+#rectangle3 {
+    -fx-arc-width: 30;  /* Rounded corners */
+    -fx-arc-height: 30;
+    -fx-fill: lightgrey;  /* Fill color (background color for rectangle) */
+    -fx-effect: dropshadow(gaussian, rgba(50, 50, 93, 0.25), 30, 0.25, 0, 12),
+                dropshadow(gaussian, rgba(0, 0, 0, 0.3), 18, 0.3, 0, 18);
+}
+.rectangle4{
+ -fx-arc-width: 30;  /* Rounded corners */
+    -fx-arc-height: 30;
+    -fx-fill: lightgrey;  /* Fill color (background color for rectangle) */
+    -fx-effect: dropshadow(gaussian, rgba(50, 50, 93, 0.25), 30, 0.25, 0, 12),
+                dropshadow(gaussian, rgba(0, 0, 0, 0.3), 18, 0.3, 0, 18);
+
+}

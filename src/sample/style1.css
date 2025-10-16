@@ -1,0 +1,199 @@
+/* Form Container */
+.form {
+    -fx-background-color: #fff;
+    -fx-padding: 20;
+    -fx-border-radius: 20;
+    -fx-spacing: 10;
+}
+
+/* Title */
+.title {
+    -fx-font-size: 48px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding-left: 30;
+    -fx-alignment: center-left;
+    -fx-effect: dropshadow(gaussian, royalblue, 10, 0, 0, 0);
+}
+
+/* Title Pulse Effect (Animation removed, adjusted with shadow) */
+.title:before, .title:after {
+    -fx-background-color: royalblue;
+    -fx-border-radius: 50%;
+    -fx-pref-height: 16px;
+    -fx-pref-width: 16px;
+}
+
+.title:before {
+    -fx-pref-width: 18px;
+    -fx-pref-height: 18px;
+}
+
+/* Message and Signin Text */
+.message, .signin {
+    -fx-text-fill: rgba(88, 87, 87, 0.822);
+    -fx-font-size: 14px;
+}
+
+.signin {
+    -fx-alignment: center;
+}
+
+.signin a {
+    -fx-text-fill: royalblue;
+}
+
+.signin:hover a {
+    -fx-underline: true;
+}
+
+/* Flex Container for Input Fields */
+.flex {
+    -fx-spacing: 6;
+    -fx-alignment: center;
+}
+
+/* Label and Input Field Styles */
+.input {
+    -fx-pref-width: 350px;
+    -fx-padding: 10 10 20 10;
+    -fx-border-color: rgba(105, 105, 105, 0.397);
+    -fx-border-radius: 10;
+    -fx-background-color:white;
+    -fx-focus-color: royalblue;
+}
+
+/* Placeholder Text Behavior (JavaFX lacks full support for placeholder animations) */
+.input:focused {
+    -fx-font-size: 0.9em;
+    -fx-font-weight: bold;
+}
+
+.input:valid {
+    -fx-text-fill: green;
+}
+
+/* Submit Button */
+.submit {
+    -fx-background-color: royalblue;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(gaussian, royalblue, 5, 0, 0, 0);
+    -fx-transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    -fx-background-color: rgb(56, 90, 194);
+}
+
+/* Pulse Animation (Limited support, using static effect instead) */
+@keyframes pulse {
+    from {
+        -fx-scale-x: 0.9;
+        -fx-scale-y: 0.9;
+        -fx-opacity: 1;
+    }
+
+    to {
+        -fx-scale-x: 1.8;
+        -fx-scale-y: 1.8;
+        -fx-opacity: 0;
+    }
+}
+#body1 {
+ -fx-background-radius: 20;
+    -fx-background-insets: 0;
+    -fx-background-color: radial-gradient(
+        focus-angle 36deg,
+        focus-distance 0%,
+        center 50% 50%,
+        radius 100%,
+        #A100FF 0%, #119CFD 100%);
+}
+#rectabgle4 {
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, royalblue, 10, 0, 0, 0);
+}
+
+.button {
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-border-color: none; /* No border */
+    -fx-padding: 0; /* No padding */
+    -fx-cursor: hand; /* Pointer cursor */
+    -fx-effect: none; /* Disable default focus outline */
+    -fx-transition: filter 250ms;
+    -fx-user-select: none;
+    -fx-touch-action: manipulation;
+    -fx-position: relative; /* Setting position relative */
+}
+
+.shadow {
+    -fx-position: absolute; /* Shadow positioned absolutely */
+    -fx-top: 0;
+    -fx-left: 0;
+    -fx-width: 100%; /* Full width */
+    -fx-height: 100%; /* Full height */
+    -fx-background-radius: 12px; /* Border radius */
+    -fx-background-color: rgba(0, 0, 0, 0.25); /* Shadow color */
+    -fx-translate-y: 2px; /* Positioning the shadow */
+    -fx-transition: translate 600ms cubic-bezier(0.3, 0.7, 0.4, 1); /* Transition effect */
+}
+
+.edge {
+    -fx-position: absolute;
+    -fx-top: 0;
+    -fx-left: 0;
+    -fx-width: 100%;
+    -fx-height: 100%;
+    -fx-background-radius: 12px;
+    -fx-background: linear-gradient(
+        to right,
+        rgb(128, 0, 64) 0%, /* Dark reddish color */
+        rgb(204, 0, 102) 8%, /* Slightly lighter reddish color */
+        rgb(204, 0, 102) 92%, /* Slightly lighter reddish color */
+        rgb(128, 0, 64) 100% /* Dark reddish color */
+    ); /* Gradient effect */
+}
+
+.button:hover {
+    -fx-translate-y: -6px;
+    -fx-background-color: lightgrey; /* Adjusted to a valid color */
+    -fx-transition: translate 250ms ease;
+}
+
+.button:pressed {
+    -fx-translate-y: -2px;
+    -fx-transition: translate 34ms ease;
+}
+
+.shadow:hover {
+    -fx-translate-y: 4px;
+    -fx-transition: translate 250ms ease;
+}
+
+.shadow:pressed {
+    -fx-translate-y: 1px;
+    -fx-transition: translate 34ms ease;
+}
+
+.button:focused {
+    -fx-effect: none; /* Removing outline when focused */
+}
+#body2 {
+ -fx-background-radius: 20;
+    -fx-background-insets: 0;
+      -fx-background-color:#939393;/* Adjust the path to your image */
+          -fx-background-size: cover; /* Ensure the background image covers the area */
+
+    -fx-background-color: radial-gradient(
+        focus-angle 36deg,
+        focus-distance 0%,
+        center 50% 50%,
+        radius 100%,
+        #A100FF 0%, #119CFD 100%);
+}
+#titled {
+    -fx-effect: dropshadow(gaussian, black, 10, 0, 0, 0);
+}

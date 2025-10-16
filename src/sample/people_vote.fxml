@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="body1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1013.0" prefWidth="1595.0" style="-fx-background-color: #7679B1;" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <Circle fill="#d1d1d1" layoutX="1032.0" layoutY="215.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
+   <Circle fill="#d1d1d1" layoutX="455.0" layoutY="205.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
+   
+   <!-- Sidebar Section -->
+   <AnchorPane prefHeight="1008.0" prefWidth="270.0" style="-fx-background-color: #011455;">
+       <stylesheets>
+           <URL value="@style1.css" />
+       </stylesheets>
+       <children>
+           <Button layoutX="10.0" layoutY="34.0" mnemonicParsing="false" onAction="#openHomePage" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #0BF4DC;" text="Home">
+               <styleClass>
+                   <String fx:value="shadow" />
+                   <String fx:value="edge" />
+               </styleClass>
+           </Button>
+           <Button layoutX="12.0" layoutY="108.0" mnemonicParsing="false" onAction="#openStatusPage" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #0BF4DC;" text="Status">
+               <styleClass>
+                   <String fx:value="shadow" />
+                   <String fx:value="rectangle" />
+               </styleClass>
+           </Button>
+           <Button layoutX="11.0" layoutY="182.0" mnemonicParsing="false" onAction="#openAdminPage" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #0BF4DC;" text="Admin">
+               <styleClass>
+                   <String fx:value="shadow" />
+                   <String fx:value="edge" />
+               </styleClass>
+           </Button>
+           <Button layoutX="10.0" layoutY="257.0" mnemonicParsing="false" onAction="#openCandidatePage" prefHeight="62.0" prefWidth="250.0" style="-fx-background-color: #0BF4DC;" text="Candidate">
+               <styleClass>
+                   <String fx:value="shadow" />
+                   <String fx:value="edge" />
+               </styleClass>
+           </Button>
+       </children>
+   </AnchorPane>
+   
+   <!-- Registration Form -->
+   <TextField fx:id="voteFullnameField" layoutX="377.0" layoutY="293.0" prefHeight="50.0" prefWidth="434.0" promptText="Fullname" styleClass="input" stylesheets="@style1.css" />
+   <TextField fx:id="voteEmailField" layoutX="375.0" layoutY="371.0" prefHeight="50.0" prefWidth="330.0" promptText="Email" styleClass="input" />
+   <TextField fx:id="voteRollNoField" layoutX="374.0" layoutY="454.0" promptText="Roll_no/Id" styleClass="input" />
+   <TextField fx:id="votePasswordField" layoutX="372.0" layoutY="542.0" prefHeight="26.0" prefWidth="228.0" promptText="Password" styleClass="input" />
+   <TextField fx:id="voteConfirmPasswordField" layoutX="373.0" layoutY="625.0" promptText="Confirm password" styleClass="input" />
+
+   <!-- Title -->
+   <Label layoutX="527.0" layoutY="172.0" style="-fx-text-fill: #B73D27;" styleClass="title" stylesheets="@style1.css" text="Register" textFill="RED">
+       <font>
+           <Font size="48.0" />
+       </font>
+   </Label>
+
+   <!-- Submit Button -->
+   <Button layoutX="401.0" layoutY="710.0" prefHeight="49.0" prefWidth="120.0" style="-fx-background-color: #633574;" styleClass="submit" text="Register" textFill="WHITE" onAction="#submitPeopleVote" />
+   
+   <ImageView fitHeight="105.0" fitWidth="102.0" layoutX="404.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@person1.png" />
+      </image>
+   </ImageView>
+   
+   <Label layoutX="525.0" layoutY="117.0" styleClass="title" stylesheets="@style1.css" text="People" textFill="WHITE">
+      <font>
+         <Font size="48.0" />
+      </font>
+   </Label>
+   
+   <!-- Login Section -->
+   <Label layoutX="1105.0" layoutY="182.0" style="-fx-text-fill: #B73D27;" styleClass="title" stylesheets="@style1.css" text="Login" textFill="RED">
+      <font>
+         <Font size="48.0" />
+      </font>
+   </Label>
+   
+   <ImageView fitHeight="105.0" fitWidth="102.0" layoutX="982.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@person1.png" />
+      </image>
+   </ImageView>
+   
+   <Label layoutX="1103.0" layoutY="127.0" styleClass="title" stylesheets="@style1.css" text="People" textFill="WHITE">
+      <font>
+         <Font size="48.0" />
+      </font>
+   </Label>
+   
+   <TextField fx:id="loginFullnameField" layoutX="960.0" layoutY="292.0" prefHeight="50.0" prefWidth="434.0" promptText="Fullname" styleClass="input" stylesheets="@style1.css" />
+   <TextField fx:id="loginPasswordField" layoutX="959.0" layoutY="367.0" prefHeight="26.0" prefWidth="228.0" promptText="Password" styleClass="input" />
+   
+   <!-- <Button layoutX="988.0" layoutY="453.0" onAction="#openVotingPage" prefHeight="49.0" prefWidth="120.0" style="-fx-background-color: #633574;" styleClass="submit" text="Login" textFill="WHITE" /> -->
+   <Button layoutX="988.0" layoutY="453.0" onAction="#loginPeople" prefHeight="49.0" prefWidth="120.0" style="-fx-background-color: #633574;" styleClass="submit" text="Login" textFill="WHITE" />
+
+
+<Label fx:id="peopleLabel1" layoutX="597.0" layoutY="680.0" textFill="RED" />
+
+</AnchorPane>
